@@ -1,0 +1,50 @@
+* { margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(galaxy.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bagts1 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.sun {
+    position: absolute;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(sun.png);
+    inset: 0;
+
+}
+.orbit {
+  position: absolute;
+  border: 1px dashed white;
+  border-radius: 50%;
+  animation: var(--orbit-animation);
+  width: var(--orbit-size, );
+  height: var(--orbit-size );
+
+}
+.planet {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    height: var(--planet-size);
+    width: var(--planet-size);
+    animation: var(--planet-animation);
+    margin-top: calc(var(--planet-size) / -2);
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
